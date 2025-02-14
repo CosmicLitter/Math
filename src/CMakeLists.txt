@@ -1,6 +1,6 @@
-add_library(Math INTERFACE)
+add_library(Math particle.cpp)
 
-target_include_directories(Math INTERFACE
+target_include_directories(Math PUBLIC 
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
   $<INSTALL_INTERFACE:include>
 )

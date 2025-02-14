@@ -2,10 +2,15 @@
 
 #include "vec3.hpp"
 
-using namespace Math;
+namespace Math {
+
 
 class Particle {
 protected:
   Vec3<float> position, velocity, acceleration;
-  float damping;
+  float damping, inverse_mass;
+
+  void integrate(float duration);
 };
+
+}
